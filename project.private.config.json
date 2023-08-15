@@ -2,7 +2,14 @@
     "setting": {
         "urlCheck": false,
         "IDEPreviewHotRestartCache": true,
-        "mockLogin": false
+        "mockLogin": false,
+        "bigPackageSizeSupport": false
     },
-    "disablePrivate": false
+    "disablePrivate": false,
+    "condition": {
+        "miniprogram": {
+            "current": -1,
+            "list": []
+        }
+    }
 }

@@ -1,7 +1,8 @@
 import { View } from "@tarojs/components";
+import { Button } from "@nutui/nutui-react-taro";
 import { AddressList } from "@nutui/nutui-biz";
-import { Button } from "@nutui/nutui-react";
-import "./index.scss";
+
+// import "./index.scss";
 function Index() {
   const data: any = [
     {
@@ -19,6 +20,7 @@ function Index() {
       fullAddress: "北京亦庄经济技术开发区科创十一街18号院",
     },
   ];
+
   const dataMapOptions = {
     id: "testid",
     addressDetail: "testaddressDetail",
@@ -38,20 +40,19 @@ function Index() {
   };
   return (
     <View className="nutui-react-demo">
-      <View className="index">欢迎使用 NutUI React 开发 Taro 多端项目。</View>
       <View className="index">
         <Button type="primary" className="btn">
-          NutUI React Button
+          NutUI React Button111
         </Button>
       </View>
-      {/* <AddressList
+      <AddressList
         data={data}
         showBottomButton={false}
         dataMapOptions={dataMapOptions}
         onDelIcon={delClick}
         onEditIcon={editClick}
         onItemClick={itemClick}
-      /> */}
+      />
     </View>
   );
 }
