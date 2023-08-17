@@ -1,0 +1,31 @@
+.settlement-container {
+  height: 100vh;
+  background-color: #f8f8f8;
+  padding: 20px 24px;
+  .nut-cell-group__wrap {
+    margin: 0;
+  }
+  .nut-input {
+    border-bottom: none;
+  }
+  .settlement-info {
+    display: flex;
+    color: #333;
+    font-size: 32px;
+    & > img {
+      width: 160px;
+      height: 160px;
+      margin-right: 16px;
+    }
+    .settlement-info-right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .settlement-info-num {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

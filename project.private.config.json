@@ -8,8 +8,39 @@
     "disablePrivate": false,
     "condition": {
         "miniprogram": {
-            "current": -1,
-            "list": []
+            "current": 1692252864800,
+            "list": [
+                {
+                    "id": 1692171815804,
+                    "name": "detail",
+                    "pathName": "packages/detail/index",
+                    "query": "",
+                    "scene": "990001",
+                    "launchFrom": "scan",
+                    "location": "qr_code",
+                    "mockUpdateType": "Noupdate"
+                },
+                {
+                    "id": 1692194170118,
+                    "name": "packages/settlement/index",
+                    "pathName": "packages/settlement/index",
+                    "query": "",
+                    "scene": "990001",
+                    "launchFrom": "scan",
+                    "location": "qr_code",
+                    "mockUpdateType": "Noupdate"
+                },
+                {
+                    "id": 1692252864800,
+                    "name": "pages/user/index",
+                    "pathName": "pages/user/index",
+                    "query": "",
+                    "scene": "990001",
+                    "launchFrom": "scan",
+                    "location": "qr_code",
+                    "mockUpdateType": "Noupdate"
+                }
+            ]
         }
     }
 }

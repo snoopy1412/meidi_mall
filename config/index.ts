@@ -1,3 +1,4 @@
+const path = require("path");
 const config = {
   projectName: "meidi_mall",
   date: "2023-8-15",
@@ -31,7 +32,13 @@ const config = {
   sass: {
     data: `@import "@nutui/nutui-react-taro/dist/styles/variables.scss";`,
   },
+  alias: {
+    "@/assets": path.resolve(__dirname, "..", "src/assets"),
+  },
   mini: {
+    miniCssExtractPluginOption: {
+      ignoreOrder: true,
+    },
     postcss: {
       pxtransform: {
         enable: true,
