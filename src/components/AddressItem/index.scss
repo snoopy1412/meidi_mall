@@ -1,0 +1,32 @@
+.address-item {
+  &-cell {
+    color: #333;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-name {
+    font-size: 32px;
+    margin-right: 8px;
+    font-weight: 600;
+  }
+  &-phone,
+  &-middle {
+    font-size: 28px;
+  }
+  &-bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-action {
+    display: flex;
+  }
+  &-icon {
+    color: rgba(51, 51, 51, 0.5);
+    display: flex;
+    align-items: center;
+    image {
+      margin-right: 4px;
+    }
+  }
+}

@@ -1,4 +1,5 @@
 import { View, Image, Text } from "@tarojs/components";
+import Taro from "@tarojs/taro";
 import {
   CellGroup,
   Cell,
@@ -17,6 +18,17 @@ import back from "@/assets/user/back.png";
 import "./index.scss";
 
 function User() {
+  const handleClick = (key) => {
+    switch (key) {
+      case "address":
+        Taro.navigateTo({
+          url: `/packages/addressList/index`,
+        });
+        break;
+      default:
+        break;
+    }
+  };
   return (
     <View className="user-container">
       <View
@@ -54,6 +66,7 @@ function User() {
               mode="widthFix"
             />
           }
+          onClick={() => handleClick("address")}
         />
         <Cell
           title="联系客服"

@@ -20,6 +20,10 @@ const config = {
   outputRoot: "dist",
   plugins: ["@tarojs/plugin-html"],
   defineConstants: {},
+  alias: {
+    "@/assets": path.resolve(__dirname, "..", "src/assets"),
+    "@/components": path.resolve(__dirname, "..", "src/components"),
+  },
   copy: {
     patterns: [],
     options: {},
@@ -31,9 +35,6 @@ const config = {
   },
   sass: {
     data: `@import "@nutui/nutui-react-taro/dist/styles/variables.scss";`,
-  },
-  alias: {
-    "@/assets": path.resolve(__dirname, "..", "src/assets"),
   },
   mini: {
     miniCssExtractPluginOption: {

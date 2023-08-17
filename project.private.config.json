@@ -39,6 +39,16 @@
                     "launchFrom": "scan",
                     "location": "qr_code",
                     "mockUpdateType": "Noupdate"
+                },
+                {
+                    "id": 1692279934136,
+                    "name": "packages/addressList/index",
+                    "pathName": "packages/addressList/index",
+                    "query": "",
+                    "scene": "990001",
+                    "launchFrom": "scan",
+                    "location": "qr_code",
+                    "mockUpdateType": "Noupdate"
                 }
             ]
         }
