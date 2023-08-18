@@ -28,12 +28,7 @@ const AddressItem = ({ info }: IProps) => {
           style={{ color: "#d1d1d1", marginTop: "12px", marginBottom: "8px" }}
         />
         <View className="address-item-bottom">
-          <Radio.RadioGroup value={isDefault ? id : undefined}>
-            <Radio iconName="success" iconActiveName="checked" value={id}>
-              默认地址
-            </Radio>
-          </Radio.RadioGroup>
-
+          <Radio checked={isDefault}>默认地址</Radio>
           <View className="address-item-action">
             <View className="address-item-icon" style={{ marginRight: "16px" }}>
               <Image src={del} mode="widthFix" style={{ width: "16px" }} />

@@ -47,54 +47,62 @@ function User() {
       </View>
       <View className="user-grid">
         <View className="user-grid-title">商城订单</View>
-        <Grid border={false}>
-          <GridItem icon={all} iconSize={32} text="全部" />
-          <GridItem icon={pay} iconSize={32} text="待支付" />
-          <GridItem icon={service} iconSize={32} text="服务中" />
-          <GridItem icon={back} iconSize={32} text="退款" />
+        <Grid>
+          <GridItem text="全部">
+            <Image src={all} mode="widthFix" style={{ width: "32px" }} />
+          </GridItem>
+          <GridItem text="待支付">
+            <Image src={pay} mode="widthFix" style={{ width: "32px" }} />
+          </GridItem>
+          <GridItem text="服务中">
+            <Image src={service} mode="widthFix" style={{ width: "32px" }} />
+          </GridItem>
+          <GridItem text="退款">
+            <Image src={back} mode="widthFix" style={{ width: "32px" }} />
+          </GridItem>
         </Grid>
       </View>
 
       <CellGroup>
         <Cell
           title="服务地址"
-          isLink
-          iconSlot={
-            <Image
-              className="user-grid-cell-icon"
-              src={location}
-              mode="widthFix"
-            />
-          }
+          // extra={<Right />}
+          // iconSlot={
+          //   <Image
+          //     className="user-grid-cell-icon"
+          //     src={location}
+          //     mode="widthFix"
+          //   />
+          // }
           onClick={() => handleClick("address")}
         />
         <Cell
           title="联系客服"
-          isLink
-          iconSlot={
-            <Image src={kefu} className="user-grid-cell-icon" mode="widthFix" />
-          }
+          // extra={<Right />}
+          // iconSlot={
+          //   <Image src={kefu} className="user-grid-cell-icon" mode="widthFix" />
+          // }
         />
         <Cell
           title="关于我们"
-          isLink
-          iconSlot={
-            <Image
-              src={about}
-              className="user-grid-cell-icon"
-              mode="widthFix"
-            />
-          }
+          // extra={<Right />}
+          // iconSlot={
+          //   <Image
+          //     src={about}
+          //     className="user-grid-cell-icon"
+          //     mode="widthFix"
+          //   />
+          // }
         />
         <Cell
           title="资质展示"
-          isLink
-          iconSlot={
-            <Image src={safe} className="user-grid-cell-icon" mode="widthFix" />
-          }
+          // extra={<Right />}
+          // iconSlot={
+          //   <Image src={safe} className="user-grid-cell-icon" mode="widthFix" />
+          // }
         />
       </CellGroup>
-      <Cell descTextAlign="center" desc="退出登录" />
+      <Cell>退出登录</Cell>
     </View>
   );
 }
