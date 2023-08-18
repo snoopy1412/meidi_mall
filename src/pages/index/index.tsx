@@ -1,7 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { SearchBar, Price } from "@nutui/nutui-react-taro";
-import { ProductFeed } from "@nutui/nutui-biz";
-import { View } from "@tarojs/components";
 import Taro from "@tarojs/taro";
 import { dataType } from "./index.d";
 import "./index.scss";
@@ -63,23 +61,6 @@ const Index = () => {
     <div className="page">
       <div className="searchBar">
         <SearchBar placeholder="请输入关键字" />
-      </div>
-      <div className="content">
-        <ProductFeed
-          style={{ width: "100%" }}
-          infiniteloadingProps={{
-            hasMore: false,
-            onLoadMore: console.log,
-          }}
-          customProduct={customProductDouble}
-          data={data}
-          col={2}
-          imgUrl="imgUrl"
-          imgWidth="165"
-          imgHeight="144"
-          onClick={handleClick}
-          onImageClick={console.log}
-        />
       </div>
     </div>
   );

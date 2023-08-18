@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { useDidShow, useDidHide } from "@tarojs/taro";
 // 全局样式
 import "@nutui/nutui-react-taro/dist/style.css";
-import "@nutui/nutui-biz/dist/style.css";
 import "./app.scss";
 
 function App(props) {

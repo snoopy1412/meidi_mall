@@ -21,15 +21,5 @@ module.exports = {
       },
       "nutui-react-taro",
     ],
-    // [
-    //   "import",
-    //   {
-    //     libraryName: "@nutui/nutui-biz",
-    //     libraryDirectory: "dist/esm",
-    //     style: true,
-    //     camel2DashComponentName: false,
-    //   },
-    //   "nutui-biz",
-    // ],
   ],
 };

@@ -1,6 +1,7 @@
+import Taro from "@tarojs/taro";
 import { View } from "@tarojs/components";
 import AddressItem from "@/components/AddressItem";
-import { CartBar, CartBarButton, CartBarIcon } from "@nutui/nutui-biz";
+import { Button } from "@nutui/nutui-react-taro";
 import "./index.scss";
 
 function AddressList() {
@@ -39,9 +40,19 @@ function AddressList() {
       {data.map((v, i) => (
         <AddressItem info={v} key={i} />
       ))}
-      <CartBar safeAreaInsetBottom placeholder>
-        <CartBarButton text="立即购买" />
-      </CartBar>
+      <View className="address-list-bottom">
+        <Button
+          block
+          type="primary"
+          onClick={() => {
+            Taro.navigateTo({
+              url: "/packages/addAddress/index",
+            });
+          }}
+        >
+          新增地址
+        </Button>
+      </View>
     </View>
   );
 }

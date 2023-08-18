@@ -2,18 +2,10 @@ import { useState, useEffect } from "react";
 import Taro from "@tarojs/taro";
 import { View } from "@tarojs/components";
 import {
-  CartBar,
-  CartBarIcon,
-  CartBarButton,
-  HorizontalScrolling,
-  Sku,
-} from "@nutui/nutui-biz";
-import {
   Swiper,
   SwiperItem,
   Cell,
   Price,
-  Icon,
   Divider,
 } from "@nutui/nutui-react-taro";
 import "./index.scss";
@@ -41,14 +33,7 @@ function Detail() {
 
   return (
     <View className="detail-container">
-      <Swiper
-        height={225}
-        paginationColor="#426543"
-        autoPlay="3000"
-        initPage={0}
-        paginationVisible
-        style={{ width: "100%" }}
-      >
+      <Swiper height={225} defaultValue={0} indicator style={{ width: "100%" }}>
         <SwiperItem>
           <img
             style={{ width: "100%" }}
@@ -65,7 +50,7 @@ function Detail() {
         </SwiperItem>
       </Swiper>
       <Cell className="detail-list">
-        <HorizontalScrolling
+        {/* <HorizontalScrolling
           maskShadowType="transparent"
           maskWidth={100}
           maskContent={
@@ -83,10 +68,10 @@ function Detail() {
               </div>
             );
           })}
-        </HorizontalScrolling>
+        </HorizontalScrolling> */}
       </Cell>
       <div className="detail-cell">
-        <Price price={145.0} size="normal" needSymbol />
+        <Price price={145.0} size="normal" thousands />
         <p className="cell-title">这是商品名称这是商品名称这是商品名称</p>
         <p className="cell-desc">高温蒸汽洗 免费上门 不满意重新洗</p>
         <Divider style={{ marginBottom: 0, color: "#ccc" }} />
@@ -95,33 +80,21 @@ function Detail() {
         <div className="cell-service">
           <span className="cell-service-left">已选服务</span>
           <span>【全拆洗】 1台电热水器清洗</span>
-          <Icon
+          {/* <Icon
             name="rect-right"
             size="small"
             color="rgba(0, 0, 0, 0.6)"
-          ></Icon>
+          ></Icon> */}
         </div>
       </Cell>
-      <Sku
-        visible={visible}
-        sku={skuData}
-        goods={goodsInfo}
-        skuStepper={null}
-        onSelectSku={console.log}
-        onClickBtnOperate={() => {
-          Taro.navigateTo({
-            url: `/packages/settlement/index`,
-          });
-        }}
-        onClose={() => setVisible(false)}
-      />
+
       <Divider className="detail-divider">服务详情</Divider>
       <img
         style={{ width: "100%" }}
         src="https://storage.360buyimg.com/jdc-article/NutUItaro34.jpg"
         alt=""
       />
-      <CartBar>
+      {/* <CartBar>
         <div style={{ width: "30%" }}>
           <CartBarIcon text="客服" iconProps={{ name: "dongdong" }} />
         </div>
@@ -136,7 +109,7 @@ function Detail() {
             }}
           />
         </div>
-      </CartBar>
+      </CartBar> */}
     </View>
   );
 }
