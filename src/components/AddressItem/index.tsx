@@ -1,7 +1,7 @@
-import { Cell, Divider, Radio } from "@nutui/nutui-react-taro";
+import { Cell, Divider, Checkbox } from "@nutui/nutui-react-taro";
 import { View, Image, Text } from "@tarojs/components";
-import del from "@/assets/components/del.png";
-import edit from "@/assets/components/edit.png";
+import del from "@/assets/components/del.svg";
+import edit from "@/assets/components/edit.svg";
 import "./index.scss";
 
 type Props = {
@@ -13,9 +13,13 @@ type Props = {
 };
 interface IProps {
   info: Props;
+  onClick?: any;
 }
-const AddressItem = ({ info }: IProps) => {
+const AddressItem = ({ info, onClick }: IProps) => {
   const { name, phone, location, isDefault, id } = info || {};
+  const handleClick = (key) => {
+    onClick && onClick({ key, id });
+  };
   return (
     <View className="address-item">
       <Cell className="address-item-cell">
@@ -28,13 +32,20 @@ const AddressItem = ({ info }: IProps) => {
           style={{ color: "#d1d1d1", marginTop: "12px", marginBottom: "8px" }}
         />
         <View className="address-item-bottom">
-          <Radio checked={isDefault}>默认地址</Radio>
+          <Checkbox defaultChecked={isDefault} label="默认地址" />
           <View className="address-item-action">
-            <View className="address-item-icon" style={{ marginRight: "16px" }}>
+            <View
+              className="address-item-icon"
+              style={{ marginRight: "16px" }}
+              onClick={() => handleClick("edit")}
+            >
               <Image src={del} mode="widthFix" style={{ width: "16px" }} />
               <Text>编辑</Text>
             </View>
-            <View className="address-item-icon">
+            <View
+              className="address-item-icon"
+              onClick={() => handleClick("delete")}
+            >
               <Image src={edit} mode="widthFix" style={{ width: "16px" }} />
               <Text>删除</Text>
             </View>

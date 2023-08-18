@@ -44,6 +44,12 @@ export default defineAppConfig({
       name: "地址编辑",
       independent: false,
     },
+    {
+      root: "packages/orderList",
+      pages: ["index"],
+      name: "订单列表",
+      independent: false,
+    },
   ],
   window: {
     backgroundTextStyle: "light",
@@ -60,14 +66,14 @@ export default defineAppConfig({
       {
         pagePath: "pages/index/index",
         text: "首页",
-        iconPath: "./assets/tabBar/home.png",
-        selectedIconPath: "./assets/tabBar/home_selected.png",
+        iconPath: "./assets/tabBar/home.svg",
+        selectedIconPath: "./assets/tabBar/home_selected.svg",
       },
       {
         pagePath: "pages/user/index",
         text: "我的",
-        iconPath: "./assets/tabBar/my.png",
-        selectedIconPath: "./assets/tabBar/my_selected.png",
+        iconPath: "./assets/tabBar/my.svg",
+        selectedIconPath: "./assets/tabBar/my_selected.svg",
       },
     ],
   },

@@ -25,15 +25,33 @@
     padding-bottom: 0;
     margin-top: -50px;
     &-title {
+      font-size: 44px;
+      font-weight: 500;
       padding-left: 32px;
     }
   }
-  .user-grid-cell-icon {
-    width: 32px;
-    margin-right: 10px;
-  }
-  .nut-cell-group__wrap .nut-cell {
+  .user-group-title {
     display: flex;
     align-items: center;
+  }
+  .user-group-icon {
+    width: 32px;
+    margin-right: 20px;
+  }
+  .user-right-icon {
+    width: 32px;
+  }
+  .nut-cell-group__wrap,
+  .nut-cell {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+  .nut-cell {
+    display: flex;
+    justify-content: center;
+  }
+  .nut-grid-item__content--border,
+  .nut-grid__border {
+    border-width: 0 !important;
   }
 }

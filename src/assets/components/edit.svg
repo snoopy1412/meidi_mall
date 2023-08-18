@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>切片</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="选择地址" transform="translate(-241.000000, -182.000000)" stroke="#979797">
+            <g id="edit" transform="translate(241.000000, 182.000000)">
+                <path d="M9,2 L4,2 C2.8954305,2 2,2.8954305 2,4 L2,12 C2,13.1045695 2.8954305,14 4,14 L12,14 C13.1045695,14 14,13.1045695 14,12 L14,6 L14,6" id="路径-33" stroke-linejoin="round"></path>
+                <line x1="9" y1="7" x2="14" y2="2" id="路径-37"></line>
+            </g>
+        </g>
+    </g>
+</svg>
