@@ -50,6 +50,12 @@ export default defineAppConfig({
       name: "订单列表",
       independent: false,
     },
+    {
+      root: "packages/book",
+      pages: ["index"],
+      name: "订单预约",
+      independent: false,
+    },
   ],
   window: {
     backgroundTextStyle: "light",

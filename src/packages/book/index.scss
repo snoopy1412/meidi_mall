@@ -1,0 +1,102 @@
+.book-container {
+  background-color: #f8f8f8;
+  padding: 20px 24px;
+  height: 100vh;
+  .book-address {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 20px 32px;
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    &-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 32px;
+    }
+    &-info {
+      display: flex;
+      align-items: center;
+    }
+    &-icon {
+      width: 32px;
+      margin-right: 6px;
+    }
+    &-detail {
+      color: #27282b;
+      font-size: 32px;
+    }
+    &-bottom {
+      .book-address-selected {
+        position: relative;
+        width: 220px;
+        height: 100px;
+        background: rgba(0, 146, 216, 0.1);
+        border-radius: 16px;
+        border: 1px solid #0092d8;
+        color: #0092d8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        &-icon {
+          transform: rotate(45deg);
+          color: #fff;
+          position: absolute;
+          top: -35px;
+          right: -35px;
+          width: 70px;
+          height: 70px;
+          background: #0092d8;
+        }
+        &-check {
+          font-size: 18px;
+          position: absolute;
+          transform: rotate(-45deg);
+          right: 14px;
+          bottom: -6px;
+        }
+      }
+    }
+  }
+  .book-selected {
+    background-color: #fff;
+    padding: 20px 32px;
+    display: flex;
+    font-size: 24px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    &-left {
+      font-size: 28px;
+    }
+    &-right {
+      display: flex;
+      align-items: center;
+      &-text {
+        font-size: 28px;
+        color: #999;
+      }
+      &-img {
+        width: 24px;
+        margin-left: 16px;
+      }
+    }
+  }
+  .book-bottom {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    bottom: constant(safe-area-inset-bottom);
+    bottom: env(safe-area-inset-bottom);
+    width: 100%;
+    padding: 12px 32px 24px;
+    z-index: 999;
+    background-color: #fff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}

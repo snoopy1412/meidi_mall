@@ -1,3 +1,4 @@
+import Taro from "@tarojs/taro";
 import { View, Text, Image } from "@tarojs/components";
 import { Divider } from "@nutui/nutui-react-taro";
 import bg from "@/assets/user/bg.png";
@@ -5,6 +6,19 @@ import ButtonGroup from "./ButtonGroup";
 import "./index.scss";
 
 const OrderItem = () => {
+  const handleAction = (key) => {
+    switch (key) {
+      case "book": //预约
+        Taro.navigateTo({
+          url: "/packages/book/index",
+        });
+        break;
+      case "refund": //退款
+        break;
+      default:
+        break;
+    }
+  };
   return (
     <View className="orderItem-container">
       <View className="orderItem-title">
@@ -32,7 +46,7 @@ const OrderItem = () => {
       <View className="orderItem-bottom">
         <Text className="orderItem-bottom-time">上门时间：08-15 </Text>
         <View>
-          <ButtonGroup />
+          <ButtonGroup onClick={handleAction} />
         </View>
       </View>
     </View>

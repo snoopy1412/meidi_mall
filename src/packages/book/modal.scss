@@ -1,0 +1,54 @@
+.time-modal {
+  color: #333;
+  padding: 48px 34px;
+  padding-bottom: 120px;
+  &-top {
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+  }
+  &-title {
+    font-size: 28px;
+    font-weight: 600;
+  }
+  &-middle {
+    .time-modal-list {
+      .time-modal-info-selected {
+        color: #333 !important;
+        background-color: rgba(0, 146, 216, 0.08) !important;
+      }
+      .time-modal-info {
+        font-size: 28px;
+        padding: 16px 88px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+        border-radius: 16px;
+        font-weight: 400;
+        box-sizing: border-box;
+        color: rgba(51, 51, 51, 0.6);
+      }
+    }
+  }
+  &-bottom {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    bottom: constant(safe-area-inset-bottom);
+    bottom: env(safe-area-inset-bottom);
+    width: 100%;
+    padding: 32px 64px;
+    padding-left: 72px;
+    z-index: 999;
+    background-color: #fff;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    button {
+      width: 280px;
+    }
+  }
+}
